@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+    <style>
+
+        body{
+            margin: 0;
+        }
+
+        nav
+        {
+            display: none;
+            background-color: coral;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            flex-direction: column;
+            padding-left: 1%;
+        }
+
+        nav a
+        {
+            margin: 12px 0;
+        }
+
+        button
+        {
+            font-family: 'Material Icons Outlined';
+        }
+
+        .botoes
+        {
+            background-color: transparent;
+            border: 0;
+            width: 48px;
+            height: 48px;
+            font-size: 30px;
+        }
+    </style>
+
+    <script>
+        function abrir()
+        {
+            var menu = document.getElementById("menu-principal");
+            menu.style.display = "flex";
+
+            var botao = document.getElementById("botao-abrir");
+            botao.style.display = "none";
+        }
+
+        function fechar()
+        {
+            var menu = document.getElementById("menu-principal");
+            menu.style.display = "none";
+
+            var botao = document.getElementById("botao-abrir");
+            botao.style.display = "block";
+        }
+    </script>
+
+</head>
+<body>
+    <header>
+        <button id="botao-abrir" class="botoes" onclick="abrir()" >menu</button>
+    
+        <nav id="menu-principal">
+            <button class="botoes" onclick="fechar()">close</button>
+            <a href="">Início</a>
+            <a href="">Sobre</a>
+            <a href="">Contato</a>
+            <a href="">Área restrita</a>
+        </nav>
+    </header>
+  
+    <main>
+        <section>
+            <h1>Meu site</h1>
+        </section>
+    </main>
+    
+
+   
+</body>
+</html>
